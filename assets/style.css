@@ -1,0 +1,99 @@
+/* Add New font Style */
+@font-face {
+    font-family: myFirstFont;
+    src: url('fonts/digital-7.regular.ttf');
+}
+html *{
+    font-family: myFirstFont;
+}
+
+body{
+    background-image: url(img/bg3.jpg);
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin: 20px;
+}
+
+/* Set the Particle JS to be the Background */
+#particles-js{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.cheader-style{
+    font-family: myFirstFont;
+    /* font-weight: bold; */
+    font-size:14mm;
+    white-space: nowrap; 
+    width: 100%; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    border: 1px solid #000000;
+    background-color: white;
+    /* opacity: 0.9; */
+}
+.cnum-style{
+    /* background-color: white; */
+    font-family: myFirstFont;
+    font-size:6mm;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 5px;
+    /* border: 1px solid #000000; */
+
+}
+
+.card-style{
+    background-color: transparent;
+    border: solid 1px white;
+}
+
+.card-footer-style{
+    text-align: center;
+}
+
+
+.ballon{
+    float: right;;
+}
+
+.hide{
+    display: none;
+}
+
+/* FLIP CARD  */
+.flip-card {
+    /* background-color: transparent;  */
+    perspective: 1000px;  
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 8px 10px 0 rgba(90,90,90,0.2)
+}
+  
+  
+.flip-card.flipped .flip-card-inner {   
+    transform: rotateY(180deg);
+}
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  
+  
+  .flip-card-back {
+  
+    transform: rotateY(180deg);
+  }

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Caculator</title>
+    <link rel="stylesheet" href="./modules/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/fontawesome/styles.min.css" />
+    <link rel="stylesheet" href="./modules/caleandar/css/theme1.css" />
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="flip-card mb-3">
+                <div class="flip-card-inner">
+
+                    
+                    <!--Standar Calculator-->
+                    <div class="flip-card-front">
+                        <!--Card content-->
+                     
+                        <div class="card card-style">
+                            <div class="card-header">
+                                <input class="form-control cheader-style" value="0" style="text-align: right;"
+                                disabled />
+                            
+                            </div>
+                            <div class="card-body" id="standard">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-danger cnum-style">AC</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style"><-</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">SQ</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">/</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">7</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">8</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">9</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">*</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">4</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">5</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">6</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">-</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">3</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">2</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">1</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">+</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">0</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">.</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button class="btn btn-primary cnum-style">=</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                    </div>
+
+                    <!--Advance Calculator-->
+                    <div class="flip-card-back">
+                        <!--Card content-->
+                        <div class="card card-style">
+                            <div class="card-header">
+                                <input class="form-control cheader-style" value="0" style="text-align: right;"
+                                disabled />
+                            </div>
+                            <div class="card-body" id="advanced">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-danger cnum-style">AC</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style"><-</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">SQ</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">/</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">abs</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">acos</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">asin</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">atan</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">cos</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">exp</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">flr</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">log</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">pow</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">rnd</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">sin</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">tan</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">7</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">8</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">9</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">*</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">4</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">5</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">6</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">-</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">3</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">2</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">1</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">+</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">0</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button class="btn btn-secondary cnum-style">.</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button class="btn btn-primary cnum-style">=</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+                
+
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-style">
+                        <div class="card-header">
+                            <h4 class="card-title" style="color: wheat;">CACULATOR LOGs</h4>
+                            
+                        </div>
+                        <div class="card-body">
+                            <a class="btn btn-danger pull-right" id="change-calc" style="color: white; cursor: pointer;">Advanced</a>
+                            <br />
+                            <br />
+                            <div class="card card-style">
+                                <div class="card-body">
+                                    <pre id="logs" style="color: white; font-size: larger; height: 300px; overflow-y: scroll;"></pre>
+                                </div>
+                                <div class="card-footer clearfix">
+                                    <div class="pull-right">
+                                        <a class="btn btn-primary" id="clearlogs" style="color: white; cursor: pointer;">
+                                            <i class="fa fa-times"></i> Clear Logs
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" align="center" style="color: white;">
+                    <div id="calender"></div>
+                    <h4 id="xtime"></h4>
+                    <hr />
+                    <br />
+                    <!-- <div id="boxanime" style="float: left;">++++</div> -->
+                    <div id="info">
+                        <div>FB: <a target="_blank" href="https://www.facebook.com/kingkira969">Jc Velarde</a></div>
+                        <div>Github: <a target="_blank" href="https://github.com/kingkira777">king</a></div>
+                        <div>Created By: Jc Velarde</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./modules/jquery/jquery.min.js"></script>
+    <script src="./modules/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./modules/moment/moment_locales.min.js"></script>
+    <script src="./modules/anime/lib/anime.min.js"></script>
+    <script src="./modules/caleandar/js/caleandar.min.js"></script>
+    <script src="./modules/particles.js/particles.js"></script>
+
+    <script src="./app.js"></script>
+    <script src="./particlebg.js"></script>
+</body>
+
+</html>
