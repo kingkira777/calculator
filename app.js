@@ -1,6 +1,13 @@
 'use strict';
 
-let Calculator = function () {
+/**
+ * THIS IS NOT RESPONSIVE PAGE
+ * Simple Calculator using JavaScript
+ * By: Jc Velarde
+ * 
+ */
+
+let Calculator =  function() {
 
   //Global Variable within the function
   var current = '', secVal = ''; //Store the Current Display Values (eg. 1+2+4-3/2*1)
@@ -8,7 +15,7 @@ let Calculator = function () {
 
 
   //Inialize DOM first
-  var _initDOM = function () {
+  var _initDOM = () => {
 
     $('#logs').html('>Init Calculator.........');
     sDisplay = $('.cheader-style');  // Display the Current User Input(s)
@@ -53,17 +60,18 @@ let Calculator = function () {
         case "<-":
           opt = '';
           _backspace(current);
+          _logs('<-');
           break;
         case "SQ":
-          opt = '';
-          var nVal = (current == '')? secVal : current;
-          var sqVal = Math.sqrt(eval(nVal));
-          _logs(' ... sqrt(' + sqVal + ')');
-          _normalizeSum(sqVal);
+          opt = 'sqrt';
+          var nVal = eval((current == '')? secVal : current);
+          sDisplay.val('sqrt('+nVal+')');
+          _logs( ' ... sqrt(' + nVal + ')' );
           break;
         case "=":
           _logs(_this);
           _normalizeSum(current);
+          _scrollDown();
           opt = '';
           current = '';
           break;
@@ -118,7 +126,7 @@ let Calculator = function () {
           opt = _this;
           break;
         case "pow":
-          var nVal = eval((current == '')? secVal : current);
+          var nVal = ((current == '')? secVal : current);
           sDisplay.val('pow(' + nVal + ')');
           _logs(' ... pow(' + nVal + ')');
           opt = _this;
@@ -153,6 +161,12 @@ let Calculator = function () {
     });
   }
 
+  //Always scroll down
+  var _scrollDown = function(){
+    $('#logs').animate({
+      scrollTop : 1000
+    });
+  };
 
   // Do not Duplicate the entered Operators
   var _added_operators = (_val,_this) => {
@@ -164,6 +178,7 @@ let Calculator = function () {
       return '';
     }
   };
+
 
   //Back Space 1 at a time
   var _backspace = (_val) => {
@@ -180,7 +195,12 @@ let Calculator = function () {
 
   // Normalize Sum
   var _normalizeSum =  (_sum) => {
-    if (opt === "abs") {
+    if(opt === "sqrt"){
+      var nVal = Math.sqrt((_sum == '')? secVal : _sum);
+      current = nVal.toFixed(4);
+      sDisplay.val(current);
+      _logs(current);
+    }else if (opt === "abs") {
       var nVal = Math.abs((_sum == '')? secVal : _sum);
       current = nVal;
       sDisplay.val(current);
@@ -221,7 +241,9 @@ let Calculator = function () {
       sDisplay.val(current);
       _logs(current);
     } else if (opt === "pow") {
-      var nVal = Math.pow((_sum == '')? secVal : _sum);
+      var nVal = (_sum == '')? secVal : _sum;
+      var xVal = nVal.split('*');
+      nVal = Math.pow(Number(xVal[0]),Number(xVal[1]));
       current = nVal.toFixed(4);
       sDisplay.val(current);
       _logs(current);
@@ -251,6 +273,7 @@ let Calculator = function () {
         _logs(current);
       }catch(e){
         console.log("error handled");
+        _logs('Unhandled Value');
       }
     }
 
