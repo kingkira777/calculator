@@ -12,7 +12,7 @@ var _initParticleJs = function(){
           "value": "#ffffff"
         },
         "shape": {
-          "type": "circle",
+          "type": "edge",
           "stroke": {
             "width": 0,
             "color": "#000000"
