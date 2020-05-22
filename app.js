@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * THIS IS NOT RESPONSIVE PAGE
  * Simple Calculator using JavaScript
@@ -14,10 +13,15 @@ let Calculator =  function() {
   var time, sDisplay, opt, logs = '';
 
 
+
   //Inialize DOM first
   var _initDOM = () => {
 
+    
+
     $('#logs').html('>Init Calculator.........');
+
+
     sDisplay = $('.cheader-style');  // Display the Current User Input(s)
     
 
